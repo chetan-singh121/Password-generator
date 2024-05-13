@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .tooltip
+        {
+            opacity: 0;
+            
+        }
+        .active
+        {
+            opacity: 1;
+        }
+        .indicator
+        {
+            height: 1rem;
+            width: 1rem;
+            border-radius:50%;
+            filter:blur(2px);
+          
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper w-[100vw] h-[100vh]  flex flex-col  justify-center items-center">
+        <div class="card">
+            <h1 class="text-white text-[20px] font-semibold mb-3"> 
+                PASSWORD GENERATOR
+            </h1>
+            <div class=" display-container rounded-md border-b-2 border-violet-500 mb-5">
+                <input readonly placeholder="Passowrd" class="display bg-transparent border-none text-yellow-500 " data-passwordDisplay>
+                <button  class="copyBtn" data-copy>
+                    <span  class="tooltip text-yellow-300 bg-violet-500 rounded-md p-1 absolute top-56" data-copyMsg></span>
+                    <img src="assets/copy.svg" alt="copy" width="23" height="23" >
+                </button>
+
+                
+            </div>
+
+            <!-- input contaner -->
+            <div class="input-container flex flex-col bg-darkViolet text-white p-4 pl-7 pr-7  rounded-md ">
+                <div class="length-container flex justify-between mt-2 mb-2">
+                    <p>Password Length</p>
+                    <p class="text-yellow-300" data-lengthNumber>10</p>
+
+                </div>
+
+                <!-- slider -->
+                <input type="range" min="1" max="20" step="1" data-lengthSlider class="slider " >
+
+                <!-- checkbox -->
+                <div class="mt-5">
+
+                    <input type="checkbox" id="c1" name="c1" class="accent-green-400">
+                    <label for="c1">Include Uppercase Letters</label>
+                </div>
+
+                <div>
+
+                    <input type="checkbox" id="c2" name="c2" class="accent-green-400">
+                    <label for="c2">Include Lowercase Letters</label>
+                </div>
+
+                <div>
+
+                    <input type="checkbox" id="c3" name="c3" class="accent-green-400">
+                    <label for="c3">Include Numbers</label>
+                </div>
+
+                <div class="mb-4">
+
+                    <input type="checkbox" id="c4" name="c4" class="accent-green-400">
+                    <label for="c4">Include Symbol</label>
+                </div>
+
+                <!-- strength -->
+                <div class="strength-container flex justify-between mb-5">
+                    <h1>Strength</h1>
+                    <div  class="  z-10 indicator bg-slate-50  z-2 " data-indicator></div>
+                </div>
+
+                <!-- button -->
+                <button class="generateBtn bg-violet-600 rounded-md p-1 text-yellow-300 border-yellow-300 border-b-2">GENERATE PASSWORD</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* qyestion ye hai ki js jo class list add krta hoga wo css file se hi to krta hoga ,but yaha kyu
+ni ho ra html me likh ra hu to ho ra hail. */
+.active
+ {
+    opacity: 1;
+            transform: scale(1);
+ }
+
+ .wrapper
+{
+    background: linear-gradient(to bottom left,rgb(12, 3, 21) 0% ,rgb(107, 39, 174) 50%);
+}
+.tooltip
+{
+    
+    opacity: 0;
+    
+}
+.display-container
+{
+    background-color: rgb(7, 1, 12);
+    padding:10px;
+    padding-left:15px;
+    padding-right:15px;
+    
+}
+.slider
+{
+    appearance: none;
+    background-color: rgb(141, 129, 141);
+    width:100%;
+    height: 0.35rem;
+    cursor: pointer;
+   
+    
+  
+}
+
+
+
+
+/* my question
+ye placeholder par border kaise hataun jo click krne pr aa ra h */
+
+/* slider yellow kaise banaun */
+
+
+    
+
+          
